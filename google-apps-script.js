@@ -1,10 +1,10 @@
 /******************************************************************************
- * This tutorial is based on the work of Martin Hawksey twitter.com/mhawksey  *
- * But has been simplified and cleaned up to make it more beginner friendly   *
- * All credit still goes to Martin and any issues/complaints/questions to me. *
+  "Credit goes to Martin Hawksey and his amazing tutorial" - Cartez Augustus 
+  The tutorial is based on the work of Martin Hawksey twitter.com/mhawksey   
+  All credit still goes to Martin and any issues/complaints/questions to me. 
  ******************************************************************************/
 
-var TO_ADDRESS = "contact.beremts12+form.submit@gmail.com"; // change this ...
+var TO_ADDRESS = "uplyftstudios@gmail.com"; // change this ...
 
 function formatMailBody(obj) { // function to spit out all the keys/values from the form in HTML
   var result = "";
@@ -72,5 +72,5 @@ function record_data(e) {
   finally {
     return;
   }
-
 }
+
