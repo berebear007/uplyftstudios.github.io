@@ -463,41 +463,20 @@
                 <h3 class="mbr-section-title display-2" style="color:white;">SUBSCRIBE NOW</h3><br>
                 <!--<h5 class="card-subtitle" style="color:white;">If you would like to be a beta tester for our apps, please contact us now!</h5><br>
                 <div><a class="btn btn-black" href="https://goo.gl/forms/Wtx2L1YqITjq3kv63">SUBMIT FORM</a> <!--<a class="btn btn-black" href="#">ANDROID</a></div>-->
-  <div class="form">
-          <!--<h1>Work With Us</h1>-->
-          
-  <form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbygK6cVTZaNTJgRNv3B-WXw9Rx6bAwjTNZOfTVtFqV8B5lwGs2I/exec">          
-          
- <div class="field-wrap">
-    <span class="plain-select">
-<select id="interest" name="interest">
-  <option id="interest" name="interest" value="">Contact Us</option>
-  <option id="interest" name="interest" value="Partner">Partner with us</option>
-  <option id="interest" name="interest" value="Beta Tester">Beta tester</option>
-  <option id="interest" name="interest" value="Advertise">Advertise with us</option>
-</select>
-    </span>
- </div>
-        
-            <div class="field-wrap">
- <label>Full Name<span class="req">*</span>
-            </label>
-            <input id="name" name="name" type="name" required autocomplete="off"/>
-            </div>
 
-          <div class="field-wrap">
-            <label>
-              Email Address<span class="req">*</span>
-            </label>
-            <input id="email" name="email" type="email" required autocomplete="off"/>
-          </div>
-          <button type="submit" class="button button-block"/>Sign Up</button>
-          </form>
-   
-  <div class="thankyou_message" id="thankyou_message">
-    <h2>Thank you for contacting us! We will get back to you soon!</h2>
-  </div>
-        </div>
+
+<form action="contact.php" method="post">
+    Your name<br>
+    <input type="text" name="cf_name"><br>
+    Your e-mail<br>
+    <input type="text" name="cf_email"><br>
+    Message<br>
+    <textarea name="cf_message"></textarea><br>
+    <input type="submit" value="Send">
+    <input type="reset" value="Clear">
+</form>
+
+
           </div>
 
         </div>
