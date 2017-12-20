@@ -460,51 +460,75 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-xs-center">
 
-                <h3 class="mbr-section-title display-2" style="color:white;">SUBSCRIBE NOW</h3><br>
+                <h3 class="mbr-section-title display-2" style="color:white;">WORK WITH US</h3><br>
                 <!--<h5 class="card-subtitle" style="color:white;">If you would like to be a beta tester for our apps, please contact us now!</h5><br>
                 <div><a class="btn btn-black" href="https://goo.gl/forms/Wtx2L1YqITjq3kv63">SUBMIT FORM</a> <!--<a class="btn btn-black" href="#">ANDROID</a></div>-->
-  <div class="form">
-          <!--<h1>Work With Us</h1>-->
-          
-  <form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbygK6cVTZaNTJgRNv3B-WXw9Rx6bAwjTNZOfTVtFqV8B5lwGs2I/exec">          
-          
- <div class="field-wrap">
-    <span class="plain-select">
-<select id="interest" name="interest">
-  <option id="interest" name="interest" value="">Contact Us</option>
-  <option id="interest" name="interest" value="Partner">Partner with us</option>
-  <option id="interest" name="interest" value="Beta Tester">Beta tester</option>
-  <option id="interest" name="interest" value="Advertise">Advertise with us</option>
-</select>
-    </span>
- </div>
-        
-            <div class="field-wrap">
- <label>Full Name<span class="req">*</span>
-            </label>
-            <input id="name" name="name" type="name" required autocomplete="off"/>
+
+
+<form id="contact-form" method="post" action="contact.php" role="form">
+
+    <div class="messages"></div>
+
+    <div class="controls">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_name"></label>
+                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
             </div>
-
-          <div class="field-wrap">
-            <label>
-              Email Address<span class="req">*</span>
-            </label>
-            <input id="email" name="email" type="email" required autocomplete="off"/>
-          </div>
-          <button type="submit" class="button button-block"/>Sign Up</button>
-          </form>
-   
-  <div class="thankyou_message" id="thankyou_message">
-    <h2>Thank you for contacting us! We will get back to you soon!</h2>
-  </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_lastname"></label>
+                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
         </div>
-          </div>
-
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_email"></label>
+                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_phone"></label>
+                    <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Please enter your phone">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
         </div>
-        
-      </div><!-- tab-content -->
-      
-</div> <!-- /form -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <br><label for="form_message"></label>
+                    <textarea id="form_message" name="message" class="form-control" placeholder="Message for us: (ex. Work with us, Partner with us, Advertise with us, Become a Beta Tester" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <input type="submit" class="btn btn-success btn-send" value="Send Message" style="color:white;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-muted" style="color:white;"><strong>*</strong> These fields are required.</p>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
+
+
+
+
 
 
 

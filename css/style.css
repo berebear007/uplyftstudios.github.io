@@ -189,30 +189,14 @@ textarea {
   margin: 0;
 }
 
-.button {
-  border: 0;
-  outline: none;
-  border-radius: 0;
-  padding: 15px 0;
-  font-size: 1.5rem;
-  font-weight: 200;
-  letter-spacing: .1em;
-  background: #179b77;
-  color: #ffffff;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  -webkit-appearance: none;
-}
-.button:hover, .button:focus {
-  background: #179b77;
-}
-
-.button-block {
-  display: block;
-  width: 100%;
+.btn-success {
+    background-color: #bee09d;
+    border-color: #bee09d;
+    color: #ffffff;
 }
 
 .forgot {
   margin-top: -20px;
   text-align: right;
 }
+
