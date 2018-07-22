@@ -1197,6 +1197,14 @@ badge                                        </div>
       </label>
       <textarea class="form-control" cols="40" id="message" name="message" rows="10"></textarea>
      </div>
+     
+                             <div class="form-group">
+                            <div class="g-recaptcha" data-sitekey="66Lf0sGUUAAAAALLg-EHQUm6UPo5_04IfSqbw21P4
+" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+                            <input class="form-control d-none" data-recaptcha="true" required data-error="Please complete the Captcha">
+                            <div class="help-block with-errors"></div>
+                        </div>
+
      <div class="form-group">
       <div>
        <button class="btn btn-custom btn-lg btn-block" name="submit" type="submit">
@@ -1404,6 +1412,9 @@ badge                                        </div>
 
         <script src="game/assets/js/plugins.js"></script>
         <script src="game/assets/js/main.js"></script>
+
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+
 
 
     </body>
