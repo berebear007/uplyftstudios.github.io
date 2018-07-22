@@ -34,7 +34,22 @@
         <link rel="stylesheet" href="game/assets/css/responsive.css" />
 
         <script src="game/assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
+
     </head>
+
+<!-- Inline CSS based on choices in "Settings" tab -->
+<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: #383838}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: #ffffff !important;} .bootstrap-iso .btn-custom{background: #67cde7} .bootstrap-iso .btn-custom:hover{background: #53b9d3;} .asteriskField{color: red;}</style>
+<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: #383838}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: #ffffff !important;} .bootstrap-iso .btn-custom{background: #67cde7} .bootstrap-iso .btn-custom:hover{background: #53b9d3;} .asteriskField{color: red;}</style>
+
+
+
     <body data-spy="scroll" data-target=".navbar-collapse">
 
         <div class='preloader'><div class='loaded'>&nbsp;</div></div>
@@ -834,78 +849,77 @@ badge                                        </div>
 
 
 
-    <form name="freecontactform" method="post" action="freecontactformprocess.php" onsubmit="return validate.check(this)">
-    <table width="400px" class="freecontactform">
-    <tr>
-     <td colspan="2">
-      
-     <div class="freecontactformheader">Contact Us Form</div>
-      
-     <div class="freecontactformmessage">Fields marked with <span class="required_star"> * </span> are mandatory.</div>
-      
-     </td>
-    </tr>
-    <tr>
-     <td valign="top">
-      <label for="Full_Name" class="required">Full Name<span class="required_star"> * </span></label>
-     </td>
-     <td valign="top">
-      <input type="text" name="Full_Name" id="Full_Name" maxlength="80" style="width:230px">
-     </td>
-    </tr>
-    <tr>
-     <td valign="top">
-      <label for="Email_Address" class="required">Email Address<span class="required_star"> * </span></label>
-     </td>
-     <td valign="top">
-      <input type="text" name="Email_Address" id="Email_Address" maxlength="100" style="width:230px">
-     </td>
-    </tr>
-    <tr>
-     <td valign="top">
-      <label for="Telephone_Number" class="not-required">Telephone Number</label>
-     </td>
-     <td valign="top">
-      <input type="text" name="Telephone_Number" id="Telephone_Number" maxlength="100" style="width:230px">
-     </td>
-    </tr>
-    <tr>
-     <td valign="top">
-      <label for="Your_Message" class="required">Your Message<span class="required_star"> * </span></label>
-     </td>
-     <td valign="top">
-      <textarea style="width:230px;height:160px" name="Your_Message" id="Your_Message" maxlength="2000"></textarea>
-     </td>
-    </tr>
-    <tr>
-     <td colspan="2" style="text-align:center" >
-      <div class="antispammessage">
-      To help prevent automated spam, please answer this question
-      <br /><br />
-          <div class="antispamquestion">
-           <span class="required_star"> * </span>
-           Using only numbers, what is 10 plus 15? &nbsp; 
-           <input type="text" name="AntiSpam" id="AntiSpam" maxlength="100" style="width:30px">
-          </div>
+<!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+<div class="bootstrap-iso">
+ <div class="container-fluid">
+  <div class="row">
+   <div class="col-md-6 col-sm-6 col-xs-12">
+    <div class="formden_header">
+     <h2>
+      Volunteer Sign Up
+     </h2>
+     <p>
+     </p>
+    </div>
+    <form method="post">
+     <div class="form-group ">
+      <label class="control-label requiredField" for="name">
+       Full Name
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="name" name="name" placeholder="Full Name" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="email">
+       Email
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="email" name="email" placeholder="example@email.com" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="number">
+       Phone Number
+      </label>
+      <input class="form-control" id="number" name="number" placeholder="###-###-####" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="select">
+       Please select an option:
+      </label>
+      <select class="select form-control" id="select" name="select">
+       <option value="I would like to volunteer the first day only.">
+        I would like to volunteer the first day only.
+       </option>
+       <option value="I would like to volunteer the second day only.">
+        I would like to volunteer the second day only.
+       </option>
+       <option value="I would like to volunteer both days.">
+        I would like to volunteer both days.
+       </option>
+      </select>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="message">
+       Do you have any questions regarding this volunteer opportunity?
+      </label>
+      <textarea class="form-control" cols="40" id="message" name="message" rows="10"></textarea>
+     </div>
+     <div class="form-group">
+      <div>
+       <button class="btn btn-custom btn-lg btn-block" name="submit" type="submit">
+        Submit
+       </button>
       </div>
-     </td>
-    </tr>
-    <tr>
-     <td colspan="2" style="text-align:center" >
-     <br /><br />
-      <input type="submit" value=" Submit Form " style="width:200px;height:40px">
-      <br /><br />
-      <!-- 
-      If you want to remove this author link, 
-      please purchase an unbranded version from: http://www.freecontactform.com/unbranded_form.php 
-      Or upgrade to the professional version at: http://www.freecontactform.com/professional.php
-      -->
-      <div>Form provided by: <a href="http://www.freecontactform.com">FreeContactForm.com</a></div>
-      <br /><br />
-     </td>
-    </tr>
-    </table>
+     </div>
     </form>
+   </div>
+  </div>
+ </div>
+</div>
 
 
             <!-- Client Logo Section -->
@@ -1082,75 +1096,195 @@ badge                                        </div>
                                     <div class="col-sm-6">
                                         <div class="main_contact_info">
                                             <div class="row">
-                                                <div class="contact_info_content padding-top-90 padding-bottom-60 p_l_r">
-                                                    <div class="col-sm-12">
-                                                        <div class="single_contact_info">
-                                                            <div class="single_info_text">
-                                                                <h3>OUR ADDRESS</h3>
-                                                                <h4>House #13, Streat road, Sydney 
-                                                                    2310 Australia</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-12">
-                                                        <div class="single_contact_info">
-                                                            <div class="single_info_text">
-                                                                <h3>CALL US</h3>
-                                                                <h4>+ 880 168 109 1425</h4>
-                                                                <h4>+ 0216809142</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-12">
-                                                        <div class="single_contact_info">
-                                                            <div class="single_info_text">
-                                                                <h3>EMAIL US</h3>
-                                                                <h4>contactus@email.com</h4>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                                <div>
+                
+<!-- VOLUNTEER START -->
+
+
+<!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+<div class="bootstrap-iso">
+ <div class="container-fluid">
+  <div class="row">
+   <div class="col-md-12">
+    <div class="formden_header">
+     <h2>
+      Volunteer Sign Up
+     </h2>
+     <hr />
+     <p>
+     </p>
+    </div>
+    <form method="post">
+     <div class="form-group ">
+      <label class="control-label requiredField" for="name">
+       Full Name
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="name" name="name" placeholder="Full Name" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="email">
+       Email
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="email" name="email" placeholder="example@email.com" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="number">
+       Phone Number
+      </label>
+      <input class="form-control" id="number" name="number" placeholder="###-###-####" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="select">
+       Please select an option:
+      </label>
+      <select class="select form-control" id="select" name="select">
+       <option value="I would like to volunteer the first day only.">
+        I would like to volunteer the first day only.
+       </option>
+       <option value="I would like to volunteer the second day only.">
+        I would like to volunteer the second day only.
+       </option>
+       <option value="I would like to volunteer both days.">
+        I would like to volunteer both days.
+       </option>
+      </select>
+     </div>
+    <div class="form-group ">
+      <label class="control-label" for="text">
+       Favorite video game?
+      </label>
+      <input class="form-control" id="text" name="text" placeholder="Fortnite" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="message">
+       Do you have any questions regarding this volunteer opportunity?
+      </label>
+      <textarea class="form-control" cols="40" id="message" name="message" rows="10"></textarea>
+     </div>
+     <div class="form-group">
+      <div>
+       <button class="btn btn-custom btn-lg btn-block" name="submit" type="submit">
+        Submit
+       </button>
+      </div>
+     </div>
+    </form>
+   </div>
+  </div>
+ </div>
+</div>
+
+
+<!-- VOLUNTEER END -->
+
+
                                                 </div>
                                             </div>
                                         </div>
                                     </div> 
 
                                     <div class="col-sm-6">
-                                        <div class="single_contant_left padding-top-90 padding-bottom-90">
-                                            <form action="#" id="formid">
-                                                <div class="col-lg-8 col-md-8 col-sm-10 col-lg-offset-2 col-md-offset-2 col-sm-offset-1">
-
-                                                    <div class="row">
-                                                        <div class="col-sm-12">
-                                                            <div class="form-group">
-                                                                <input type="text" class="form-control" name="name" placeholder="First Name" required="">
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                        <div>
+                                            
+<!-- SPONSOR START -->
 
 
-                                                    <div class="row">
-                                                        <div class="col-sm-12">
-                                                            <div class="form-group">
-                                                                <input type="email" class="form-control" name="email" placeholder="Email" required="">
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-12">
-                                                            <div class="form-group">
-                                                                <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                                                            </div>
-                                                        </div>
-                                                    </div>
+<!-- HTML Form (wrapped in a .bootstrap-iso div) -->
+<div class="bootstrap-iso">
+ <div class="container-fluid">
+  <div class="row">
+   <div class="col-md-12">
+    <div class="formden_header">
+     <h2>
+      Sponsor Sign Up
+     </h2>
+     <hr />
+     <p>
+     </p>
+    </div>
+    <form method="post">
+     <div class="form-group ">
+      <label class="control-label requiredField" for="name">
+       Full Name
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="name" name="name" placeholder="Full Name" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="text">
+       Organization Name
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="text" name="text" placeholder="Company Co." type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="email">
+       Email
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="email" name="email" placeholder="example@email.com" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="number">
+       Phone Number
+      </label>
+      <input class="form-control" id="number" name="number" placeholder="###-###-####" type="text"/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="select">
+       Please select the level of sponsorship you would like to contribute
+      </label>
+      <select class="select form-control" id="select" name="select">
+       <option value="Sponsor 1">
+        Sponsor 1
+       </option>
+       <option value="Sponsor 2">
+        Sponsor 2
+       </option>
+       <option value="Sponsor 3">
+        Sponsor 3
+       </option>
+       <option value="Sponsor 4">
+        Sponsor 4
+       </option>
+      </select>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="message">
+       Do you have any further questions?
+      </label>
+      <textarea class="form-control" cols="40" id="message" name="message" rows="10"></textarea>
+     </div>
+     <div class="form-group">
+      <div>
+       <button class="btn btn-custom btn-lg btn-block" name="submit" type="submit">
+        Submit
+       </button>
+      </div>
+     </div>
+    </form>
+   </div>
+  </div>
+ </div>
+</div>
 
 
-                                                    <div class="form-group">
-                                                        <textarea class="form-control" name="message" rows="7" placeholder="Message"></textarea>
-                                                    </div>
+<!-- SPRONSOR END -->
 
-                                                    <div class="">
-                                                        <input type="submit" value="SEND MESSAGE" class="btn btn-lg">
-                                                    </div>
-                                                </div> 
-                                            </form>
+
+
                                         </div>
                                     </div>
 
@@ -1244,6 +1378,7 @@ badge                                        </div>
 
         <script src="game/assets/js/plugins.js"></script>
         <script src="game/assets/js/main.js"></script>
+
 
     </body>
 </html>
